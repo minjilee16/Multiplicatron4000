@@ -1,3 +1,16 @@
 const multiply= require('./adder.js')
 
-console.log(multiply([2,4]))
+class ViewManager {
+
+	connectEventHandlers(){
+		document.getElementById('')
+	}
+	onSubmit(event) {
+
+	}
+
+}
+
+
+const viewManager = new ViewManager(); 
+viewManager.connectEventHandlers();
