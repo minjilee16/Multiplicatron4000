@@ -1,0 +1,31 @@
+#form-numbers {
+	width: 200px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+#numbers > div {
+	padding: 10px 20px;
+}
+
+
+#form-numbers hr, input[type=text] {
+	width: 80px;
+	font-size: 36px;
+	text-align: center;
+}
+
+
+#form-numbers button {
+	font-size: 24px; 
+	margin-top: 50px;
+}
+
+
+
+.question {
+	font-size: 48px ;
+	text-align: center; 
+	font-weight: bold;
+}

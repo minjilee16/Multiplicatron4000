@@ -1,6 +1,6 @@
 const multiply= require('./adder.js')
 
-// var matches = document.querySelectorAll("div.onButton, div.alert");
+
 
 class ViewManager {
 
@@ -9,13 +9,12 @@ class ViewManager {
 		document.getElementById("multiply")
 		.addEventListener(
 		   'click', 
-		    this.onSubmit
-		    );
+		    this.onSubmit.bind(this));
 
 		document.getElementById("textBox")
 		.addEventListener(
 			'click',
-			this.onButton
+			this.onButton.bind(this)
 			);	
 	}
 
@@ -25,7 +24,6 @@ class ViewManager {
   		 var numbers = document.getElementById("numbers");
   		 var div = document.createElement("div");
   		 var label = document.createElement("label");
-  		 // label.append("Number: ");
   		 var input = document.createElement("input");
   		 input.className = "input-num";
   		 input.type= "text";
@@ -33,10 +31,10 @@ class ViewManager {
   		 div.appendChild(label);
   		 div.appendChild(input);
   		 numbers.appendChild(div);
-
 	}
 
-	onSubmit (event) {
+	onSubmit(event) {
+		debugger;
 		console.log("sdfsd");
 		event.preventDefault();
 		let arr =[];
@@ -45,8 +43,13 @@ class ViewManager {
 		for (let i=0; i < nums.length; i++) {
 			arr.push(parseInt(nums[i].value));
 		}	
-		alert(multiply(arr));
+		var result =multiply(arr); 
+		this.renderMultiply(result); 
+	}
 
+	renderMultiply(output) {
+		// console.log("yo");
+		document.querySelector('.question').textContent = output;
 	}
 
 }
