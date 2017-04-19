@@ -28,13 +28,20 @@ const server = http.createServer(function (request, response) {
 			});
 		}
 	});
-		
 	});
 });
 
-const PORT = process.env.PORT || 8000 
-server.listen(8000, function () {
-	console.log('Server listening on port '+ PORT +'...');
+console.log(process)
+
+var port = process.env.PORT || 14915;
+server.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
 });
 
+
+
+// const PORT = process.env.PORT || 3427 
+// server.listen(3427, function () {
+// 	console.log('Server listening on port '+ PORT +'...');
+// });
 

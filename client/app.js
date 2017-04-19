@@ -9,7 +9,8 @@ class ViewManager {
 		document.getElementById("multiply")
 		.addEventListener(
 		   'click', 
-		    this.onSubmit.bind(this));
+		    this.onSubmit.bind(this)
+		    );
 
 		document.getElementById("textBox")
 		.addEventListener(
