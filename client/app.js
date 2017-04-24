@@ -4,7 +4,6 @@ const multiply= require('./adder.js')
 
 class ViewManager {
 
-
 	connectEventHandlers(){
 		document.getElementById("multiply")
 		.addEventListener(
@@ -14,6 +13,7 @@ class ViewManager {
 
 		document.getElementById("textBox")
 		.addEventListener(
+
 			'click',
 			this.onButton.bind(this)
 			);	
@@ -39,7 +39,7 @@ class ViewManager {
 		console.log("sdfsd");
 		event.preventDefault();
 		let arr =[];
-		let nums = document.getElementsByClassName("input-num");
+		let nums = document.getElementsByClassNam("input-num");
 		// debugger;
 		for (let i=0; i < nums.length; i++) {
 			arr.push(parseInt(nums[i].value));

@@ -31,17 +31,10 @@ const server = http.createServer(function (request, response) {
 	});
 });
 
-console.log(process)
 
 var port = process.env.PORT || 14915;
 server.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
 });
 
-
-
-// const PORT = process.env.PORT || 3427 
-// server.listen(3427, function () {
-// 	console.log('Server listening on port '+ PORT +'...');
-// });
 

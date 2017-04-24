@@ -10,9 +10,9 @@ class TestSuite {
 
 	runTests () {
   		Object.getOwnPropertyNames(Object.getPrototypeOf(this))
-  		.filter(prop => this[prop] instanceof Function)
-  		.filter(prop => prop.indexOf('test') !== -1)
-  		.forEach(testName => this.runTest(testName) )
+  		.filter( prop => this[prop] instanceof Function )
+  		.filter( prop => prop.indexOf('test') !== -1 )
+  		.forEach( testName => this.runTest(testName) )
 	}
 
 	assertEquals(a, b) {
